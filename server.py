@@ -1,5 +1,5 @@
 import chat_bot
-bot=chat_bot.telegram_chatbot("797382536:AAE7xX2VuyfzuCQaQlXlc5-syjwcJF0qU54")
+bot=chat_bot.telegram_chatbot("token")
 
 update_id=None
 
