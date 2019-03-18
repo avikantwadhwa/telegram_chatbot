@@ -11,14 +11,14 @@ class telegram_chatbot:
 
     def __init__(self,config):
         self.token="797382536:AAE7xX2VuyfzuCQaQlXlc5-syjwcJF0qU54"
-        self.base="https://api.telegram.org/bot{}/".format(self.token)
+        self.base="https://api.telegram.org/bot{}".format(self.token)
         
     def get_updates(self,offset=None):
             url=self.base + "/getUpdates?&timeout=100"
             if offset:
                 url=url+"&offset={}".format(offset+1)
-                r=requests.get(url)
-                return json.loads(r.content)
+            r=requests.get(url)
+            return r.json()
         
     def sendMessage(self,msg,chat_id):
             url=self.base + "/sendMessage?chat_id={}&text={}".format(chat_id,msg)
