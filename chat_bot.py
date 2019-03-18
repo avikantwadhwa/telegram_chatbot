@@ -2,7 +2,7 @@ import json
 import requests
 import configparser as cfg
 
-class telegram_chatbot():
+class telegram_chatbot:
 
     def read_token_from_config_file(self,config):
             parser=cfg.ConfigParser()
