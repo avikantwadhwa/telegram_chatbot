@@ -1,8 +1,11 @@
-from chat_bot import telegram_chatbot
-bot=telegram_chatbot()
+import chat_bot
+bot=chat_bot.telegram_chatbot("797382536:AAE7xX2VuyfzuCQaQlXlc5-syjwcJF0qU54")
 
 update_id=None
 
+def make_reply(message):
+    reply="okay"
+    return reply
 while True:
     print("...")
     updates=bot.get_updates(offset=update_id)
