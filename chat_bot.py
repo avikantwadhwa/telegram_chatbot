@@ -10,7 +10,7 @@ class telegram_chatbot:
             return parser.get('creds','token')
 
     def __init__(self,config):
-        self.token=self.read_token_from_config_file(config)
+        self.token="797382536:AAE7xX2VuyfzuCQaQlXlc5-syjwcJF0qU54"
         self.base="https://api.telegram.org/bot{}/".format(self.token)
         
     def get_updates(self,offset=None):
